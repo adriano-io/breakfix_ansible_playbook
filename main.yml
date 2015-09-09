@@ -13,7 +13,7 @@
       file: path=/home/Breakfix state=absent
 
     - name: Transfer zip File
-      copy: src:'Breakfixes.zip' dest:'/home/'
+      copy: src='files/Breakfixes.zip' dest='/home/'
 
     - name: Unzip File
-      unarchive: src='/home/Breakfixes.zip' dest='/home/Breakfix' copy=no
+      unarchive: src='/home/Breakfixes.zip' dest='/home/' copy=no
