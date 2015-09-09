@@ -17,3 +17,6 @@
 
     - name: Unzip File
       unarchive: src='/home/Breakfixes.zip' dest='/home/' copy=no
+
+    - name: Remove zip
+      file: path='/home/Breakfixes.zip' state=absent
