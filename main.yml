@@ -1,0 +1,19 @@
+---
+- hosts: SS_TEAM
+  sudo: yes
+
+  # vars_files:
+  #   - vars/...
+  #
+  # vars:
+  #   wp_version: ...
+
+  tasks:
+    - name: Check Breakfix Location
+      file: path=/home/Breakfix state=absent
+
+    - name: Transfer zip File
+      file: src: ...   dest: /home/
+
+    - name: Unzip File
+      unarchive: src=/home/file.zip dest=/home/Breakfix copy=no
